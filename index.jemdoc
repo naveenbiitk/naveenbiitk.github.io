@@ -1,0 +1,43 @@
+# jemdoc: menu{MENU}{index.html}, notime  
+==Yoonchang Sung 
+
+~~~
+{}{img_left}{photos/Yoon_Photography.png}{alt text}{140}{185}{http://yoonchangsung.com/}
+Ph.D. Student,\n [https://ece.vt.edu/ Bradley Department of Electrical and Computer Engineering], \n[https://vt.edu/ Virginia Tech]\n
+621 Whittemore Hall, Virginia Tech, \n
+Blacksburg, VA 24061, USA \n 
+Email: /yooncs8/ \[@\] vt \[DOT\] edu
+~~~
+
+== About me
+I am a Ph.D. student in the [https://ece.vt.edu/ Bradley Department of Electrical and Computer Engineering] at [https://vt.edu/ Virginia Tech]. I am a part of [https://www.raas.ece.vt.edu/ RAAS Lab] advised by [http://tokekar.github.io/ Prof. Pratap Tokekar]. I received my M.S. and B.S. degrees in the School of Mechanical Engineering from [https://www.korea.edu/ Korea University] in 2013 and 2011, respectively.
+
+== Education
+- Ph.D. Student in Electrical & Computer Engineering, Virginia Tech, Expected in 2019
+- M.S. in Mechanical Engineering, Korea University, 2013
+- B.S. in Mechanical Engineering, Korea University, 2011
+
+#~~~
+#== Recent News
+#- *Nov `18*: 
+#~~~
+
+== Research Interests
+- Algorithmic Robotics  
+- Path Planning
+- Computational Geometry
+- Cooperative Robotics
+- Decision Making
+
+[research.html Find out more about my research].
+
+== Recent Publications 
+. Z. Zhang, J. Lee, JM Smereka, *Y. Sung*, L. Zhou, and P. Tokekar, \“Tree search techniques for minimizing detectability and maximizing visibility,\” /IEEE Robotics and Automation Letters (RA-L)/, Note: Submitted.
+. *Y. Sung*, AK Budhiraja, RK Williams, and P. Tokekar, \“Distributed simultaneous action and target assignment for multi-robot multi-target tracking,\” /Autonomous Robots (AURO)/, Note: Submitted.
+. *Y. Sung*, and P. Tokekar, \“GM-PHD filter for searching and tracking an unknown number of targets with a mobile sensor with limited FoV,\” /IEEE Transactions on Automation Science and Engineering (T-ASE)/, Note: Submitted.
+. *Y. Sung*, and P. Tokekar, \“A competitive algorithm for online multi-robot exploration of a translating plume,\” /IEEE International Conference on Robotics and Automation (ICRA 2019)/, Note: Submitted.
+. *Y. Sung*, AK Budhiraja, RK Williams, and P. Tokekar, \“Distributed simultaneous action and target assignment for multi-robot multi-target tracking,\” /IEEE International Conference on Robotics and Automation (ICRA 2018)/, 2018. \[[pub/sata-icra-2018.pdf pdf]\]
+
+[pub.html Full list of publications].
+#\n
+#[yoon_cv.pdf My cv].

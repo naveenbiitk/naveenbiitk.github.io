@@ -1,6 +1,7 @@
 menu
     Home                [index.html]
-    Research			[research.html]
+    Undergrad_Research			[research_1.html]
+    Grad_School_Research		[research_2.html]
 	Publication         [pub.html]
 	CV					[yoon_cv.pdf]
 #	Teaching			[teaching.html]

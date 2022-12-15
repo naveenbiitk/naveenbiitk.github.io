@@ -8,7 +8,7 @@ table#tlayout {
 
 body {
 	background: white;
-	font-family: Georgia, serif;
+	font-family: Roboto, Roboto;
 	padding-bottom: 8px;
 	margin: 0;
 }
@@ -17,9 +17,9 @@ body {
 	background: #f6f6f6;
 	border: 1px solid #dddddd;
 	padding-top: 0.5em;
-	padding-left: 8px;
-	padding-right: 8px;
-	font-size: 1.0em;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 1.5em;
 	width: auto;
 	white-space: nowrap;
     text-align: left;
@@ -51,8 +51,8 @@ tt {
 }
 
 pre, tt {
-	font-size: 90%;
-	font-family: monaco, monospace;
+	font-size: 100%;
+	font-family: roboto, monospace;
 }
 
 a, a > tt {
@@ -149,6 +149,7 @@ p {
 	margin-bottom: 0.8em;
 	padding: 0;
 	line-height: 1.3;
+	font-size: 1.3em;
 }
 
 pre {
@@ -157,7 +158,7 @@ pre {
 }
 
 div#footer {
-	font-size: small;
+	font-size: medium;
 	border-top: 1px solid #c0c0c0;
 	padding-top: 0.1em;
 	margin-top: 4.0em;
@@ -365,3 +366,30 @@ table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
 }
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+	float: left;
+	width: 48%;
+	padding: 5px;
+  }
+
+  .column_s {
+	float: left;
+	width: 32%;
+	padding: 5px;
+  }
+
+  .column_sdd {
+	float: left;
+	height: 300px;
+	width: 32%;
+	padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }

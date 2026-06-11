@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Research — Naveen Balaji</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">naveen.balaji<span class="dot">_</span></a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="research.html" class="current">research</a>
+      <a href="projects.html">projects</a>
+      <a href="publication.html">publications</a>
+      <a href="blog.html">blog</a>
+      <a href="hobbies.html">hobbies</a>
+      <a href="Curriculum_Vitae_GT_1_Robotics.pdf" target="_blank">cv ↗</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <p class="eyebrow">Research</p>
+  <h1 style="font-family:var(--display); letter-spacing:-0.02em; margin:0 0 8px;">What I work on</h1>
+  <p style="color:var(--muted); max-width:680px;">One thread runs through all of it: helping machines perceive the world reliably enough to act in it — from drones that navigate without GPS, to manipulators that assist people, to AI that reads medical images.</p>
+
+  <h2 class="section">Current · Healthcare AI Lab, GT/Emory (2025–present)</h2>
+
+  <div class="card">
+    <h3>Medical-image perception with deep learning <span style="font-family:var(--mono); font-size:12px; color:var(--muted);">· Dr. Anant Madabhushi</span></h3>
+    <div class="plain">I build AI that looks at medical images — like photos of the retina — and predicts health risks, while making sure we can see <em>why</em> the model decided what it did.</div>
+    <ul>
+      <li>Developed deep-learning pipelines for medical-image classification, segmentation, interpretability, and cross-domain validation.</li>
+      <li>Built foundation-model feature extraction and survival-modeling workflows for retinal fundus images to estimate time-to-event kidney risk.</li>
+      <li>Created heatmap, attribution, and error-analysis workflows to inspect learned image signals and support model debugging.</li>
+      <li>Designed reproducible evaluation pipelines across datasets, improving visibility into failure modes and generalization behavior.</li>
+    </ul>
+    <div class="spec"><span>DOMAIN <b>retinal fundus imaging</b></span><span>STACK <b>foundation models · survival analysis</b></span><span>FOCUS <b>interpretability &amp; validation</b></span></div>
+  </div>
+
+  <h2 class="section">3D perception · Georgia Tech (2024)</h2>
+
+  <div class="card">
+    <h3>Semantic scene completion with 3D generative AI <span style="font-family:var(--mono); font-size:12px; color:var(--muted);">· Dr. Lu Gan</span></h3>
+    <div class="plain">A robot's sensors only see part of a scene — the rest is hidden behind objects. I researched generative models that fill in the missing 3D structure so the robot can reason about what it can't see.</div>
+    <ul>
+      <li>Researched semantic scene completion for autonomous-robot perception using 3D generative AI models.</li>
+      <li>Implemented conditional diffusion baselines with latent-space representations for 3D scene understanding on the KITTI dataset.</li>
+      <li>Evaluated 3D perception performance for scene reasoning, occupancy understanding, and navigation-aware perception.</li>
+    </ul>
+    <div class="spec"><span>DATA <b>KITTI</b></span><span>STACK <b>conditional diffusion · latent spaces</b></span><span>USE <b>occupancy &amp; navigation</b></span></div>
+  </div>
+
+  <h2 class="section">Assistive robotics · Healthcare Robotics Lab (2021–2023)</h2>
+
+  <div class="card">
+    <h3>Mobile manipulators for assistive tasks <span style="font-family:var(--mono); font-size:12px; color:var(--muted);">· Dr. Charlie Kemp</span></h3>
+    <div class="plain">I taught robot arms on wheels to help people with everyday tasks — reaching toward the body, handing over objects like a cane — by letting human and robot learn to cooperate as two active partners.</div>
+    <ul>
+      <li>Developed simulation and data-generation pipelines for mobile-manipulator autonomy, supporting training and evaluation of robot learning policies for assistive tasks.</li>
+      <li>Built embodied-AI workflows for grasping, handover, and human-centered interaction, connecting perception outputs with policy learning and task execution.</li>
+      <li>Integrated multimodal perception — including pose detection in occluded regions — for robust human-aware robot behavior.</li>
+      <li>Created reproducible reinforcement-learning experiment workflows: simulation setup, policy testing, and qualitative failure analysis.</li>
+    </ul>
+    <div class="media"><iframe width="560" height="315" src="https://www.youtube.com/embed/xOfQpRMjsQQ" title="Joint reaching simulation with Stretch and PR2 robots" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="media"><img src="research/reach_1.jpg" alt="Real-world robot reaching experiment with a human subject" /></div>
+    <div class="spec"><span>PLATFORM <b>Stretch · PR2</b></span><span>STACK <b>RL · PyBullet · pose estimation</b></span><span>STAGE <b>sim → real, human trials</b></span></div>
+  </div>
+
+  <div class="card">
+    <h3>Object handover &amp; human behavior modeling (sim2real)</h3>
+    <div class="plain">The robot learns handover skills in a physics simulator with realistic virtual humans — people lying on beds, sitting in chairs — then carries those skills into the real world.</div>
+    <ul>
+      <li>Trained handover policies in PyBullet with moving, reactive humans, then transferred and validated them on a physical robot.</li>
+      <li>Modeled humans on beds using the public SLP dataset and generated quasi-static sitting poses for safe assistive-task training.</li>
+    </ul>
+    <div class="media media-row">
+      <img src="research/strect-cane-oct18.gif" alt="Simulated cane handover with Stretch robot" />
+      <img src="research/dec-13-1.gif" alt="Real-world handover transfer" />
+    </div>
+    <div class="media media-row">
+      <img src="research/result_1.gif" alt="Simulated human on bed from SLP dataset" />
+      <img src="research/human-test-rl.gif" alt="RL test with simulated seated human" />
+    </div>
+    <div class="spec"><span>DATA <b>SLP dataset</b></span><span>STACK <b>PyBullet · policy transfer</b></span><span>STAGE <b>sim2real validated</b></span></div>
+  </div>
+
+  <h2 class="section">UAV autonomy · IIT Kanpur (2019–2021)</h2>
+
+  <div class="card">
+    <h3>GPS-denied fail-safe localization for UAVs <span style="font-family:var(--mono); font-size:12px; color:var(--muted);">· Dr. Mangal Kothari, IGC Lab</span></h3>
+    <div class="plain">Drones usually rely on GPS and a compass. Indoors and around steel structures, both fail — so I built backup systems that fuse inertial sensors with radio beacons to keep the drone confident about where it is.</div>
+    <ul>
+      <li>Developed Kalman-filter attitude and position estimators for indoor localization and autonomous navigation.</li>
+      <li>Designed a GPS-denied fail-safe pose-estimation system combining inertial and range-based measurements, <b>reducing localization failure cases by 50%</b>.</li>
+      <li>Built sensor-fusion algorithms combining IMU, BLE, and UWB signals, <b>improving localization reliability by 30%</b>.</li>
+      <li>Validated performance through experimental testing and failure-case analysis across sensing conditions.</li>
+    </ul>
+    <div class="media"><iframe width="560" height="315" src="https://www.youtube.com/embed/tjvRoIlYRlA" title="Indoor drone localization research" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="card-links"><a href="report/sur_rep.pdf" target="_blank">[paper]</a></div>
+    <div class="spec"><span>PLATFORM <b>multirotor UAVs</b></span><span>STACK <b>Kalman filters · IMU + BLE + UWB</b></span><span>RESULT <b>ICUAS 2020 paper + patent</b></span></div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>© Naveen Balaji Nagarathinam</span>
+    <span><a href="publication.html">publications →</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

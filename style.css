@@ -1,0 +1,212 @@
+/* ============================================================
+   Naveen Balaji — Robotics Portfolio
+   Palette: paper #FAFBF8 · ink #1B2530 · teal #0F766E
+            amber #B45309 · line #DCE2E4 · muted #5A6672
+   Type:    Space Grotesk (display) · Source Sans 3 (body)
+            IBM Plex Mono (telemetry / labels)
+   ============================================================ */
+
+:root {
+  --paper: #fafbf8;
+  --ink: #1b2530;
+  --teal: #0f766e;
+  --teal-dark: #0b5d57;
+  --amber: #b45309;
+  --line: #dce2e4;
+  --muted: #5a6672;
+  --card: #ffffff;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --body: "Source Sans 3", -apple-system, sans-serif;
+  --display: "Space Grotesk", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a { color: var(--teal); text-decoration: none; }
+a:hover { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 251, 248, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 980px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; gap: 8px;
+  height: 58px;
+}
+.nav-brand {
+  font-family: var(--display); font-weight: 700; font-size: 17px;
+  color: var(--ink); margin-right: auto; letter-spacing: -0.01em;
+}
+.nav-brand:hover { text-decoration: none; color: var(--teal); }
+.nav-brand .dot { color: var(--teal); }
+.nav-links { display: flex; gap: 2px; flex-wrap: wrap; }
+.nav-links a {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.02em;
+  color: var(--muted); padding: 6px 10px; border-radius: 6px;
+}
+.nav-links a:hover { color: var(--ink); background: #eef1ee; text-decoration: none; }
+.nav-links a.current { color: var(--teal); font-weight: 600; }
+.nav-toggle { display: none; }
+
+@media (max-width: 760px) {
+  .nav-inner { height: auto; flex-wrap: wrap; padding: 10px 16px; }
+  .nav-links { width: 100%; padding-bottom: 6px; }
+}
+
+/* ---------- Layout ---------- */
+.wrap { max-width: 980px; margin: 0 auto; padding: 48px 24px 80px; }
+
+/* Hero with graph-paper dot grid */
+.hero {
+  position: relative;
+  padding: 56px 24px 48px;
+  border-bottom: 1px solid var(--line);
+  background-image: radial-gradient(circle, #d3dbd9 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+.hero-inner { max-width: 980px; margin: 0 auto; }
+.hero h1 {
+  font-family: var(--display); font-size: clamp(34px, 6vw, 56px);
+  letter-spacing: -0.03em; line-height: 1.05; margin: 0 0 10px;
+}
+.hero h1 .accent { color: var(--teal); }
+.hero .role { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0 0 26px; }
+.hero .role b { color: var(--ink); font-weight: 600; }
+
+/* Signature: telemetry strip */
+.telemetry {
+  display: flex; flex-wrap: wrap; gap: 10px 28px;
+  font-family: var(--mono); font-size: 12.5px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 18px; width: fit-content; max-width: 100%;
+}
+.telemetry span { color: var(--muted); }
+.telemetry b { color: var(--ink); font-weight: 600; }
+.telemetry .live::before {
+  content: "●"; color: var(--amber); margin-right: 6px; font-size: 10px;
+}
+
+/* ---------- Headings ---------- */
+.eyebrow {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--teal); margin: 0 0 6px;
+}
+h2.section {
+  font-family: var(--display); font-size: 27px; letter-spacing: -0.02em;
+  margin: 56px 0 18px; padding-bottom: 10px; border-bottom: 1px solid var(--line);
+}
+h2.section:first-of-type { margin-top: 0; }
+h3 { font-family: var(--display); font-size: 20px; letter-spacing: -0.01em; margin: 0 0 6px; }
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 24px 26px; margin-bottom: 22px;
+}
+.card:hover { border-color: #c4cdcf; }
+
+/* Plain-words explainer line */
+.plain {
+  font-size: 16.5px; color: var(--ink);
+  background: #f0f6f5; border-left: 3px solid var(--teal);
+  padding: 9px 14px; border-radius: 0 8px 8px 0; margin: 10px 0 14px;
+}
+.plain::before {
+  content: "In plain words"; display: block;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 2px;
+}
+
+/* Spec line on project cards (signature, continued) */
+.spec {
+  display: flex; flex-wrap: wrap; gap: 6px 22px;
+  font-family: var(--mono); font-size: 12px; color: var(--muted);
+  border-top: 1px dashed var(--line); margin-top: 14px; padding-top: 11px;
+}
+.spec b { color: var(--ink); font-weight: 600; }
+
+.card ul { margin: 8px 0 0; padding-left: 20px; }
+.card li { margin-bottom: 6px; }
+.card-links { margin-top: 12px; font-family: var(--mono); font-size: 13px; }
+.card-links a { margin-right: 16px; }
+
+.media { margin: 14px 0 4px; }
+.media iframe, .media img { max-width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; }
+.media-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.media-row > * { flex: 1 1 280px; min-width: 240px; }
+
+/* ---------- Home page extras ---------- */
+.intro-grid { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; }
+.intro-grid img { width: 100%; border-radius: 12px; border: 1px solid var(--line); }
+@media (max-width: 680px) { .intro-grid { grid-template-columns: 1fr; } .intro-grid img { max-width: 260px; } }
+
+.interests { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 10px 0 0; list-style: none; }
+.interests li {
+  font-family: var(--mono); font-size: 12.5px; color: var(--ink);
+  border: 1px solid var(--line); background: var(--card);
+  border-radius: 999px; padding: 5px 13px;
+}
+
+.news { list-style: none; padding: 0; margin: 0; }
+.news li {
+  display: grid; grid-template-columns: 92px 1fr; gap: 16px;
+  padding: 11px 0; border-bottom: 1px dashed var(--line);
+}
+.news time { font-family: var(--mono); font-size: 12.5px; color: var(--amber); padding-top: 3px; }
+@media (max-width: 520px) { .news li { grid-template-columns: 1fr; gap: 2px; } }
+
+/* ---------- Publications ---------- */
+.pub { padding: 16px 0; border-bottom: 1px dashed var(--line); }
+.pub .title { font-weight: 600; }
+.pub .venue { color: var(--muted); font-style: italic; }
+.pub .me { color: var(--teal); font-weight: 600; }
+.pub .links { font-family: var(--mono); font-size: 12.5px; margin-top: 4px; }
+.pub .links a { margin-right: 14px; }
+
+/* ---------- Blog ---------- */
+.post {
+  display: block; background: var(--card); border: 1px solid var(--line);
+  border-radius: 12px; padding: 22px 26px; margin-bottom: 18px; color: var(--ink);
+}
+.post:hover { text-decoration: none; border-color: var(--teal); color: var(--ink); }
+.post .meta { font-family: var(--mono); font-size: 12px; color: var(--amber); margin-bottom: 4px; }
+.post h3 { margin-bottom: 4px; }
+.post p { margin: 0; color: var(--muted); }
+.post .read { font-family: var(--mono); font-size: 12.5px; color: var(--teal); margin-top: 10px; display: inline-block; }
+
+/* ---------- Hobbies ---------- */
+.hobby-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.hobby { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+.hobby .glyph { font-size: 28px; margin-bottom: 8px; }
+.hobby p { color: var(--muted); margin: 6px 0 0; font-size: 16px; }
+.hobby .stat {
+  font-family: var(--mono); font-size: 12px; color: var(--teal);
+  border-top: 1px dashed var(--line); margin-top: 14px; padding-top: 10px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--line); margin-top: 70px;
+  padding: 26px 24px; font-family: var(--mono); font-size: 12.5px; color: var(--muted);
+}
+footer .foot-inner { max-width: 980px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; }

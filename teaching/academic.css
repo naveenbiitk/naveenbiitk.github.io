@@ -1,0 +1,10 @@
+/* Local serif fonts keep the portfolio independent of external font services. */
+body{font-family:Cambria,Georgia,"Times New Roman",serif;font-size:18px;line-height:1.65}
+h1,h2,h3,.brand,.orbit .center,.stats strong,.number{font-family:Cambria,Georgia,"Times New Roman",serif}
+h1{letter-spacing:-1.5px;line-height:1.08}
+h2{letter-spacing:-.5px;line-height:1.2}
+nav a{font-size:16px}
+.eyebrow,.tag{font-family:Cambria,Georgia,"Times New Roman",serif;font-size:12px;letter-spacing:1.5px}
+.caption,.speaker-topics{font-size:15px}
+input,select,button{font-family:inherit}
+@media(max-width:760px){h1{letter-spacing:-1px}nav a{font-size:14px}}
